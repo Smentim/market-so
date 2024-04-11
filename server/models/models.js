@@ -104,22 +104,22 @@ Item.belongsTo(Type)
 Class.hasMany(Item)
 Item.belongsTo(Class)
 
-Item.hasMany(AmmoInfo)
+Item.hasMany(AmmoInfo, {as: 'ammo_info'})
 AmmoInfo.belongsTo(Item)
 
-Item.hasMany(Equipment)
+Item.hasMany(Equipment, {as: 'equipment'})
 Equipment.belongsTo(Item)
 
-Item.hasMany(Weapon)
+Item.hasMany(Weapon, {as: 'weapon'})
 Weapon.belongsTo(Item)
 
-Item.hasMany(Containers)
+Item.hasMany(Containers, {as: 'containers'})
 Containers.belongsTo(Item)
 
-Item.hasMany(Artefacts)
+Item.hasMany(Artefacts, {as: 'artefacts'})
 Artefacts.belongsTo(Item)
 
-Item.hasMany(Grenades)
+Item.hasMany(Grenades, {as: 'grenade'})
 Grenades.belongsTo(Item)
 
 Containers.hasMany(Artefacts)
